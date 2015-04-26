@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean name="rosteringService" class="com.rostering.business.rostering.impl.RosteringServiceImpl" init-method="init">
+        <property name="solverFactory" ref="solverFactoryGLPK"/>
+        <property name="timeout" value="100"/>
+        <property name="verbose" value="0"/>
+        <property name="postSolve" value="2"/>
+    </bean>
+
+    <bean name="solverFactoryGLPK" class="net.sf.javailp.SolverFactoryGLPK"/>
+
+
+</beans>

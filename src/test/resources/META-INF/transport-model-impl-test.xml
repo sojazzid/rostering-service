@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <import resource="classpath:META-INF/context.xml"/>
+
+    <context:annotation-config/>
+
+
+    <util:list id="preferenceList">
+        <bean class="org.rostering.model.Preference">
+            <property name="driver" ref="j"/>
+            <property name="shift" ref="1"/>
+            <property name="value" value="15"/>
+        </bean>
+
+        <bean class="org.rostering.model.Preference">
+            <property name="driver" ref="j"/>
+            <property name="shift" ref="2"/>
+            <property name="value" value="10"/>
+        </bean>
+
+        <bean class="org.rostering.model.Preference">
+            <property name="driver" ref="j"/>
+            <property name="shift" ref="3"/>
+            <property name="value" value="9"/>
+        </bean>
+
+        <bean class="org.rostering.model.Preference">
+            <property name="driver" ref="d"/>
+            <property name="shift" ref="1"/>
+            <property name="value" value="9"/>
+        </bean>
+
+        <bean class="org.rostering.model.Preference">
+            <property name="driver" ref="d"/>
+            <property name="shift" ref="2"/>
+            <property name="value" value="15"/>
+        </bean>
+
+        <bean class="org.rostering.model.Preference">
+            <property name="driver" ref="d"/>
+            <property name="shift" ref="3"/>
+            <property name="value" value="10"/>
+        </bean>
+
+        <bean class="org.rostering.model.Preference">
+            <property name="driver" ref="p"/>
+            <property name="shift" ref="1"/>
+            <property name="value" value="10"/>
+        </bean>
+
+        <bean class="org.rostering.model.Preference">
+            <property name="driver" ref="p"/>
+            <property name="shift" ref="2"/>
+            <property name="value" value="12"/>
+        </bean>
+
+        <bean class="org.rostering.model.Preference">
+            <property name="driver" ref="p"/>
+            <property name="shift" ref="3"/>
+            <property name="value" value="8"/>
+        </bean>
+
+
+    </util:list>
+
+
+    <bean name="j" class="org.rostering.model.Driver">
+        <property name="id" value="1"/>
+        <property name="name" value="j"/>
+        <property name="type" value="FULL_TIME"/>
+    </bean>
+
+    <bean name="d" class="org.rostering.model.Driver">
+        <property name="id" value="2"/>
+        <property name="name" value="d"/>
+        <property name="type" value="FULL_TIME"/>
+    </bean>
+
+    <bean name="p" class="org.rostering.model.Driver">
+        <property name="id" value="3"/>
+        <property name="name" value="p"/>
+        <property name="type" value="FULL_TIME"/>
+    </bean>
+
+
+    <bean name="1" class="org.rostering.model.Shift">
+        <property name="id" value="1"/>
+        <property name="description" value="podar"/>
+        <property name="type" value="FULL_TIME"/>
+    </bean>
+
+    <bean name="2" class="org.rostering.model.Shift">
+        <property name="id" value="2"/>
+        <property name="description" value="pintar"/>
+        <property name="type" value="FULL_TIME"/>
+    </bean>
+
+    <bean name="3" class="org.rostering.model.Shift">
+        <property name="id" value="3"/>
+        <property name="description" value="lavar"/>
+        <property name="type" value="FULL_TIME"/>
+    </bean>
+
+</beans>

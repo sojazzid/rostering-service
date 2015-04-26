@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <import resource="classpath:META-INF/context.xml"/>
+
+    <context:annotation-config/>
+
+
+    <util:list id="preferenceList">
+        <bean class="org.rostering.model.Preference">
+            <property name="driver" ref="pedro"/>
+            <property name="shift" ref="turno1"/>
+            <property name="value" value="100"/>
+        </bean>
+
+        <bean class="org.rostering.model.Preference">
+            <property name="driver" ref="pedro"/>
+            <property name="shift" ref="turno2"/>
+            <property name="value" value="75"/>
+        </bean>
+
+        <bean class="org.rostering.model.Preference">
+            <property name="driver" ref="pedro"/>
+            <property name="shift" ref="turno3"/>
+            <property name="value" value="25"/>
+        </bean>
+
+        <bean class="org.rostering.model.Preference">
+            <property name="driver" ref="juan"/>
+            <property name="shift" ref="turno1"/>
+            <property name="value" value="64"/>
+        </bean>
+
+        <bean class="org.rostering.model.Preference">
+            <property name="driver" ref="juan"/>
+            <property name="shift" ref="turno2"/>
+            <property name="value" value="22"/>
+        </bean>
+
+        <bean class="org.rostering.model.Preference">
+            <property name="driver" ref="juan"/>
+            <property name="shift" ref="turno3"/>
+            <property name="value" value="80"/>
+        </bean>
+
+        <bean class="org.rostering.model.Preference">
+            <property name="driver" ref="diego"/>
+            <property name="shift" ref="turno1"/>
+            <property name="value" value="10"/>
+        </bean>
+
+        <bean class="org.rostering.model.Preference">
+            <property name="driver" ref="diego"/>
+            <property name="shift" ref="turno2"/>
+            <property name="value" value="22"/>
+        </bean>
+
+        <bean class="org.rostering.model.Preference">
+            <property name="driver" ref="diego"/>
+            <property name="shift" ref="turno3"/>
+            <property name="value" value="70"/>
+        </bean>
+
+
+    </util:list>
+
+
+    <bean name="pedro" class="org.rostering.model.Driver">
+        <property name="id" value="3"/>
+        <property name="name" value="Pedro"/>
+        <property name="type" value="FULL_TIME"/>
+    </bean>
+
+    <bean name="juan" class="org.rostering.model.Driver">
+        <property name="id" value="1"/>
+        <property name="name" value="Juan"/>
+        <property name="type" value="FULL_TIME"/>
+    </bean>
+
+    <bean name="diego" class="org.rostering.model.Driver">
+        <property name="id" value="2"/>
+        <property name="name" value="Diego"/>
+        <property name="type" value="FULL_TIME"/>
+    </bean>
+
+
+    <bean name="turno1" class="org.rostering.model.Shift">
+        <property name="id" value="1"/>
+        <property name="description" value="Turno-1"/>
+        <property name="type" value="FULL_TIME"/>
+    </bean>
+
+    <bean name="turno2" class="org.rostering.model.Shift">
+        <property name="id" value="2"/>
+        <property name="description" value="Turno-2"/>
+        <property name="type" value="FULL_TIME"/>
+    </bean>
+
+    <bean name="turno3" class="org.rostering.model.Shift">
+        <property name="id" value="3"/>
+        <property name="description" value="Turno-3"/>
+        <property name="type" value="FULL_TIME"/>
+    </bean>
+
+</beans>

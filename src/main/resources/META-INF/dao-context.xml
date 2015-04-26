@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="preferenceDao" class="com.rostering.dao.impl.PreferenceDaoImpl">
+    </bean>
+
+    <bean name="allocationDao" class="com.rostering.dao.impl.AllocationDaoImpl"/>
+
+    <bean name="driverDao" class="com.rostering.dao.impl.DriverDaoImpl"/>
+
+    <bean name="shiftDao" class="com.rostering.dao.impl.ShiftDaoImpl"/>
+
+
+</beans>

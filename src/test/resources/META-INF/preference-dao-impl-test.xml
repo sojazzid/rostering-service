@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="classpath*:META-INF/datasource.xml"/>
+    <import resource="classpath*:META-INF/dao-context.xml"/>
+
+
+    <bean name="shift" class="org.rostering.model.Shift">
+        <property name="id" value="1"/>
+        <property name="description" value="Turno 1"/>
+        <property name="type" value="FULL_TIME"/>
+    </bean>
+
+    <bean name="driver" class="org.rostering.model.Driver">
+        <property name="id" value="1"/>
+        <property name="name" value="Juan Perez"/>
+        <property name="type" value="FULL_TIME"/>
+    </bean>
+
+
+</beans>
