@@ -11,55 +11,55 @@
 
 
     <util:list id="preferenceList">
-        <bean class="org.rostering.model.Preference">
+        <bean class="com.rostering.model.Preference">
             <property name="driver" ref="j"/>
             <property name="shift" ref="1"/>
             <property name="value" value="15"/>
         </bean>
 
-        <bean class="org.rostering.model.Preference">
+        <bean class="com.rostering.model.Preference">
             <property name="driver" ref="j"/>
             <property name="shift" ref="2"/>
             <property name="value" value="10"/>
         </bean>
 
-        <bean class="org.rostering.model.Preference">
+        <bean class="com.rostering.model.Preference">
             <property name="driver" ref="j"/>
             <property name="shift" ref="3"/>
             <property name="value" value="9"/>
         </bean>
 
-        <bean class="org.rostering.model.Preference">
+        <bean class="com.rostering.model.Preference">
             <property name="driver" ref="d"/>
             <property name="shift" ref="1"/>
             <property name="value" value="9"/>
         </bean>
 
-        <bean class="org.rostering.model.Preference">
+        <bean class="com.rostering.model.Preference">
             <property name="driver" ref="d"/>
             <property name="shift" ref="2"/>
             <property name="value" value="15"/>
         </bean>
 
-        <bean class="org.rostering.model.Preference">
+        <bean class="com.rostering.model.Preference">
             <property name="driver" ref="d"/>
             <property name="shift" ref="3"/>
             <property name="value" value="10"/>
         </bean>
 
-        <bean class="org.rostering.model.Preference">
+        <bean class="com.rostering.model.Preference">
             <property name="driver" ref="p"/>
             <property name="shift" ref="1"/>
             <property name="value" value="10"/>
         </bean>
 
-        <bean class="org.rostering.model.Preference">
+        <bean class="com.rostering.model.Preference">
             <property name="driver" ref="p"/>
             <property name="shift" ref="2"/>
             <property name="value" value="12"/>
         </bean>
 
-        <bean class="org.rostering.model.Preference">
+        <bean class="com.rostering.model.Preference">
             <property name="driver" ref="p"/>
             <property name="shift" ref="3"/>
             <property name="value" value="8"/>
@@ -69,38 +69,38 @@
     </util:list>
 
 
-    <bean name="j" class="org.rostering.model.Driver">
+    <bean name="j" class="com.rostering.model.Driver">
         <property name="id" value="1"/>
         <property name="name" value="j"/>
         <property name="type" value="FULL_TIME"/>
     </bean>
 
-    <bean name="d" class="org.rostering.model.Driver">
+    <bean name="d" class="com.rostering.model.Driver">
         <property name="id" value="2"/>
         <property name="name" value="d"/>
         <property name="type" value="FULL_TIME"/>
     </bean>
 
-    <bean name="p" class="org.rostering.model.Driver">
+    <bean name="p" class="com.rostering.model.Driver">
         <property name="id" value="3"/>
         <property name="name" value="p"/>
         <property name="type" value="FULL_TIME"/>
     </bean>
 
 
-    <bean name="1" class="org.rostering.model.Shift">
+    <bean name="1" class="com.rostering.model.Shift">
         <property name="id" value="1"/>
         <property name="description" value="podar"/>
         <property name="type" value="FULL_TIME"/>
     </bean>
 
-    <bean name="2" class="org.rostering.model.Shift">
+    <bean name="2" class="com.rostering.model.Shift">
         <property name="id" value="2"/>
         <property name="description" value="pintar"/>
         <property name="type" value="FULL_TIME"/>
     </bean>
 
-    <bean name="3" class="org.rostering.model.Shift">
+    <bean name="3" class="com.rostering.model.Shift">
         <property name="id" value="3"/>
         <property name="description" value="lavar"/>
         <property name="type" value="FULL_TIME"/>

@@ -7,13 +7,13 @@
     <import resource="classpath*:META-INF/dao-context.xml"/>
 
 
-    <bean name="shift" class="org.rostering.model.Shift">
+    <bean name="shift" class="com.rostering.model.Shift">
         <property name="id" value="1"/>
         <property name="description" value="Turno 1"/>
         <property name="type" value="FULL_TIME"/>
     </bean>
 
-    <bean name="driver" class="org.rostering.model.Driver">
+    <bean name="driver" class="com.rostering.model.Driver">
         <property name="id" value="1"/>
         <property name="name" value="Juan Perez"/>
         <property name="type" value="FULL_TIME"/>

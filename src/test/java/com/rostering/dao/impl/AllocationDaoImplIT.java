@@ -14,7 +14,7 @@ import java.util.List;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:META-INF/allocation-dao-test.xml")
 @TransactionConfiguration(transactionManager = "txManager", defaultRollback = true)
-public class AllocationDaoImplTest {
+public class AllocationDaoImplIT {
 
     @Resource
     private AllocationDao allocationDao;

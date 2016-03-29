@@ -7,52 +7,52 @@
     <import resource="dao-context.xml"/>
 
 
-    <bean name="shift" class="org.rostering.model.Shift">
+    <bean name="shift" class="com.rostering.model.Shift">
         <property name="id" value="0"/>
         <property name="description" value="wildcard"/>
         <property name="type" value="FULL_TIME"/>
     </bean>
 
-    <bean name="driver" class="org.rostering.model.Driver">
+    <bean name="driver" class="com.rostering.model.Driver">
         <property name="id" value="0"/>
         <property name="name" value="wildcard"/>
         <property name="type" value="FULL_TIME"/>
     </bean>
 
-    <bean name="shift1" class="org.rostering.model.Shift">
+    <bean name="shift1" class="com.rostering.model.Shift">
         <property name="id" value="1000"/>
         <property name="description" value="wildcard1000"/>
         <property name="type" value="FULL_TIME"/>
     </bean>
 
-    <bean name="driver1" class="org.rostering.model.Driver">
+    <bean name="driver1" class="com.rostering.model.Driver">
         <property name="id" value="1000"/>
         <property name="name" value="wildcard1000"/>
         <property name="type" value="FULL_TIME"/>
     </bean>
 
-    <bean id="allocation0" class="org.rostering.model.Allocation">
+    <bean id="allocation0" class="com.rostering.model.Allocation">
         <property name="driver" ref="driver"/>
         <property name="shift" ref="shift"/>
         <property name="name" value="asignacion X"/>
         <property name="allocated" value="true"/>
     </bean>
 
-    <bean id="allocation1" class="org.rostering.model.Allocation">
+    <bean id="allocation1" class="com.rostering.model.Allocation">
         <property name="driver" ref="driver"/>
         <property name="shift" ref="shift1"/>
         <property name="name" value="asignacion X"/>
         <property name="allocated" value="false"/>
     </bean>
 
-    <bean id="allocation2" class="org.rostering.model.Allocation">
+    <bean id="allocation2" class="com.rostering.model.Allocation">
         <property name="driver" ref="driver1"/>
         <property name="shift" ref="shift"/>
         <property name="name" value="asignacion X"/>
         <property name="allocated" value="false"/>
     </bean>
 
-    <bean id="allocation3" class="org.rostering.model.Allocation">
+    <bean id="allocation3" class="com.rostering.model.Allocation">
         <property name="driver" ref="driver1"/>
         <property name="shift" ref="shift1"/>
         <property name="name" value="asignacion X"/>
@@ -68,13 +68,13 @@
 
     </util:list>
 
-    <util:list id="driverList" list-class="java.util.ArrayList" value-type="org.rostering.model.Driver">
+    <util:list id="driverList" list-class="java.util.ArrayList" value-type="com.rostering.model.Driver">
         <ref bean="driver"/>
         <ref bean="driver1"/>
 
     </util:list>
 
-    <util:list id="shiftList" list-class="java.util.ArrayList" value-type="org.rostering.model.Shift">
+    <util:list id="shiftList" list-class="java.util.ArrayList" value-type="com.rostering.model.Shift">
         <ref bean="shift"/>
         <ref bean="shift1"/>
 

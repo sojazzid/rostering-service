@@ -17,7 +17,7 @@ import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:META-INF/preference-dao-impl-test.xml")
-public class PreferenceDaoImplTest {
+public class PreferenceDaoImplIT {
 
     @Resource
     private PreferenceDao preferenceDao;

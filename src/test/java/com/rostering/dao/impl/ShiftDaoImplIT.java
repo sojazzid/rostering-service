@@ -21,7 +21,7 @@ import static org.junit.Assert.assertNotNull;
 @Transactional()
 @TransactionConfiguration(transactionManager="txManager")
 
-public class ShiftDaoImplTest {
+public class ShiftDaoImplIT {
 
     @Resource
     private ShiftDao shiftDao;

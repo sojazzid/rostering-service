@@ -20,7 +20,7 @@ import static org.junit.Assert.assertNotNull;
 @Transactional()
 @TransactionConfiguration(transactionManager="txManager")
 
-public class DriverDaoImplTest {
+public class DriverDaoImplIT {
 
     @Resource
     private DriverDao driverDao;
