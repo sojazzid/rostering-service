@@ -14,7 +14,7 @@ import javax.annotation.Resource;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:META-INF/rostering-service-impl-int-test.xml")
 
-public class RosteringServiceIntegrationImplTest {
+public class RosteringServiceIT {
 
     @Resource
     private RosteringServiceImpl rosteringService;

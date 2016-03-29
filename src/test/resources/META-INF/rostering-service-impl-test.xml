@@ -4,9 +4,71 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <import resource="classpath:META-INF/context.xml"/>
+    <!--import resource="classpath:META-INF/context.xml"/-->
 
     <context:annotation-config/>
+
+    <bean name="rosteringService" class="com.rostering.business.rostering.impl.RosteringServiceMock">
+        <property name="allocationList">
+            <util:list id="preferenceList">
+                <bean class="com.rostering.model.Allocation">
+                    <property name="driver" ref="pedro"/>
+                    <property name="shift" ref="turno1"/>
+                    <property name="allocated" value="true"/>
+                </bean>
+
+                <bean class="com.rostering.model.Allocation">
+                    <property name="driver" ref="pedro"/>
+                    <property name="shift" ref="turno2"/>
+                    <property name="allocated" value="false"/>
+                </bean>
+
+                <bean class="com.rostering.model.Allocation">
+                    <property name="driver" ref="pedro"/>
+                    <property name="shift" ref="turno3"/>
+                    <property name="allocated" value="false"/>
+                </bean>
+
+                <bean class="com.rostering.model.Allocation">
+                    <property name="driver" ref="juan"/>
+                    <property name="shift" ref="turno1"/>
+                    <property name="allocated" value="false"/>
+                </bean>
+
+                <bean class="com.rostering.model.Allocation">
+                    <property name="driver" ref="juan"/>
+                    <property name="shift" ref="turno2"/>
+                    <property name="allocated" value="true"/>
+                </bean>
+
+                <bean class="com.rostering.model.Allocation">
+                    <property name="driver" ref="juan"/>
+                    <property name="shift" ref="turno3"/>
+                    <property name="allocated" value="false"/>
+                </bean>
+
+                <bean class="com.rostering.model.Allocation">
+                    <property name="driver" ref="diego"/>
+                    <property name="shift" ref="turno1"/>
+                    <property name="allocated" value="false"/>
+                </bean>
+
+                <bean class="com.rostering.model.Allocation">
+                    <property name="driver" ref="diego"/>
+                    <property name="shift" ref="turno2"/>
+                    <property name="allocated" value="false"/>
+                </bean>
+
+                <bean class="com.rostering.model.Allocation">
+                    <property name="driver" ref="diego"/>
+                    <property name="shift" ref="turno3"/>
+                    <property name="allocated" value="true"/>
+                </bean>
+
+
+            </util:list>
+        </property>
+    </bean>
 
     <util:list id="preferenceList">
         <bean class="com.rostering.model.Preference">

@@ -3,7 +3,7 @@ package com.rostering.business.rostering.impl;
 import net.sf.javailp.*;
 import org.junit.Test;
 
-public class ILPTest {
+public class ILPIT {
 
     @Test
     public void testILP() {

@@ -30,7 +30,7 @@ public class RosteringServiceImpl implements RosteringService {
 
         Solver solver = solverFactory.get(); // you should use this solver only once for one problem
         Result result = solver.solve(problem);
-        System.out.println(result);
+        //System.out.println(result);
 
         if (null == result) {
             throw new RosteringException("No existe una solución factible para el problema modelado");
